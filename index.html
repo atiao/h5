@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ta想做你的圣诞礼物</title>
+  <link rel="stylesheet" href="css/idangerous.swiper.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no" searchtype="map">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <style>
+    /* Demo Syles */
+    html{
+      height: 100%;
+    }
+    body {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+    img{
+      width: 100%;
+    }
+  
+    .swiper-container {
+      height: 100%;
+      width: 100%;
+    }
+    .swiper-slide{
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      vertical-align:middle;
+    }
+    .page{
+      position: relative;
+    }
+    .word{
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      margin-left: -40.5%;
+      background: rgba(0,0,0,0.4);
+      width: 81%;
+      border-radius: 30px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      opacity: 0;
+    } 
+    span{
+      font-size: 1.2em;
+      line-height: 136%;
+      font-family: "黑体";
+      color: #000;
+      display: block;
+    }
+    .up{
+      width: 22px;
+      height: 14px;
+      left: 50%;
+      margin-left: -11px;
+      position: absolute;
+      bottom: 10px;
+      background:url(imgs/up.png) no-repeat;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+      z-index: 1000;
+      -webkit-animation:up 1.5s linear infinite alternate;
+    }
+    #music{
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 8px;
+      right: 8px; 
+      z-index: 100;
+    }
+    .music{
+      width: 100%;
+      height: 100%;
+      background: url(imgs/music.png) no-repeat;
+      -webkit-background-size: 100%;
+      background-size: 100%; 
+    }
+    .music-rotate{
+      -webkit-animation:rotate 1s linear infinite;
+    }
+    @-webkit-keyframes rotate{
+      from{
+        -webkit-transform:rotate(0deg);
+      }
+      to{
+        -webkit-transform:rotate(360deg);
+      }
+    }
+    .waggle{
+      -webkit-animation:waggle 0.7s infinite alternate linear;
+    }
+    @-webkit-keyframes waggle{
+      from{
+        -webkit-transform:rotate(-5deg);
+      }
+      to{
+        -webkit-transform:rotate(5deg);
+      }
+    }
+    .show1{
+      -webkit-animation:show 1.5s linear 1 forwards;
+    }
+    .img7{
+      position: absolute;
+      bottom:16px;
+      left: 0;
+      z-index: 10;
+      opacity: 0;
+    }
+    .show3{
+      -webkit-animation:show 2s linear 0.5s 1 forwards;
+    }
+    .img8{
+      width: 25%;
+      height: 15%;
+      position: absolute;
+      bottom:35px;
+      z-index: 20;
+      left: 50%;
+      margin-left: -12.5%;
+      opacity: 0;
+    }
+    .show4{
+      -webkit-animation:show 2.5s linear 1.5s 1 forwards;
+    }
+    .light1{
+      -webkit-animation:show 2s linear infinite;
+    }
+    .light2{
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-animation:show 4s linear 2s infinite;
+    }
+    @-webkit-keyframes show{
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+    } 
+    @-webkit-keyframes up{
+      from{
+        -webkit-transform:translateY(0);
+      }
+      to{
+        -webkit-transform:translateY(-10px);
+      }
+    }
+    .no1{
+      background:url(imgs/bg01-1.jpg) no-repeat ;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+    }
+    .no2{
+      background:url(imgs/bg02.jpg) no-repeat;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+    }
+    .no3{
+      background:url(imgs/bg03.jpg) no-repeat;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+    }
+    .no4{
+      background: url(imgs/bg04.jpg) no-repeat;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+    }
+    .no5{
+      background: url(imgs/bg05.jpg) no-repeat;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+    }
+    .no6{
+      background: url(imgs/bg06.jpg) no-repeat;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+    }
+    .no7{
+      background: url(imgs/bg07.jpg) no-repeat;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+      z-index: 10;
+    }
+    .word1 span{
+     color: #fff;
+    }
+    .word2{
+      border-radius: 20px;
+      background:rgba(255,255,255,0.6);
+    }
+    .post{
+      position: absolute;
+      bottom: 5px;
+    }
+    .no7 .word{
+      top:13px;
+    }
+    .look{
+      position: absolute;
+      bottom:33px;
+      width: 32.5%;
+      padding: 5px;
+      left: 50%;
+      margin-left: -16.25%;
+      font-weight: 700;
+      color: #FF4352;
+      background: #FFFD5A;
+      border-radius: 7px;
+    }
+    .share{
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .hide{
+      display: none;
+    }
+    .shareImg{
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+    }
+    .change{
+      -webkit-transition:transform 0.4s ease-out;
+      -webkit-transform:scale(0.2);
+      -transform-origin:center top 0px;
+    }
+    /*媒体查询*/
+    @media screen and (min-width:768px) {
+      span{
+        font-size: 2.2em;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide no1 page">
+        <div class="box">
+          <img src="imgs/bg01-2.jpg" class="light1">
+          <img src="imgs/bg01-3.jpg" class="light2"></div>
+        <div class="word word1">
+          <span>叮叮咚咚。。。</span>
+          <span>新年的钟声即将敲响</span>
+          <span>2014年的你收获了哪些令人</span>
+          <span>感动的瞬间</span>
+        </div>
+      </div>
+      <div class="swiper-slide no2 page">
+        <div class="word word2">
+          <span>是万般努力之后得到</span>
+          <span>的好身材？</span>
+        </div>
+      </div>
+      <div class="swiper-slide no3 page">
+        <div class="word word2">
+          <span>是事业上寻找到一个</span>
+          <span>新的突破？</span>
+
+        </div>
+      </div>
+      <div class="swiper-slide no4 page">
+        <div class="word word2">
+          <span>是终于等到能够陪伴你</span>
+          <span>走下去的爱人？</span>
+        </div>
+      </div>
+      <div class="swiper-slide no5 page">
+        <div class="word word2">
+          <span>还是一个新生命的降临</span>
+          <span>你的身边？</span>
+
+        </div>
+      </div>
+      <div class="swiper-slide no6 page">
+        <div class="word word2">
+          <span>而我们收获的，</span>
+          <span>是您的信赖与陪伴！</span>
+
+        </div>
+      </div>
+      <div class="swiper-slide no7 page swiper-no-next">
+        <div class="box7">
+          <img src="imgs/bg07-1.png" class="img7">
+          <img src="imgs/bg07-2.png" class="img8"></div>
+        <div class="word word2 word3">
+          <span>感谢您，让纽仕兰牛奶</span>
+          <span>陪您见证感动时刻！</span>
+        </div>
+      </div>
+      <div class="swiper-slide no8 page">
+        <div class="post">
+          <img src="imgs/bg11.jpg"></div>
+        <div class="look waggle">查看我的礼物</div>
+        <div class="share hide">
+          <img src="imgs/share.png" class="shareImg"></div>
+      </div>
+
+    </div>
+  </div>
+  <div id="music">
+    <div class="music music-rotate">
+      <audio src="The Icarus Account - Come Back Home.mp3" autoplay="autoplay"></audio>
+    </div>
+  </div>
+  <div class="up">
+    <div class="ups"></div>
+  </div>
+  <script src="js/jquery-1.10.1.min.js"></script>
+  <script src="js/swiper.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('.word').addClass('show1');
+   
+    var mySwiper = new Swiper('.swiper-container',{
+       mode:"vertical",
+       grabCursor: true,
+       noSwipingNext:true,
+       centerdsSlides:true,
+       onSlideChangeStart:(function(){
+        $('.swiper-slide-active').siblings().find('.word').removeClass('show1');
+        $('.swiper-slide-active').find('.word').addClass('show1');
+        $('.swiper-slide-active').find('.img7').addClass('show3');
+        $('.swiper-slide-active').siblings().find('.img7').removeClass('show3');
+        $('.swiper-slide-active').find('.img8').addClass('show4');
+        $('.swiper-slide-active').siblings().find('.img8').removeClass('show4');
+        if(mySwiper.activeIndex == 7){
+          $('.up').hide();
+        }else{
+         $('.up').show();
+        }
+       }),
+       // onSlideNext:(function(){
+       //  $('.swiper-slide-active').addClass('change')
+       // })
+
+    
+    });
+    
+      $('.img8').click(function(){
+            mySwiper.swipeTo(7);
+         });
+
+     $('.music').click(function(){
+        var $audio=$(this).find('audio')[0];
+        $(this).toggleClass('music-rotate');
+        if($audio){
+          if($(this).hasClass('music-rotate'))
+            $audio.play();
+          else
+            $audio.pause();
+        }
+     });
+
+     $('.look').click(function(){
+        $('.share').removeClass('hide');
+     });
+
+  });
+  </script>
+</body>
+</html>
